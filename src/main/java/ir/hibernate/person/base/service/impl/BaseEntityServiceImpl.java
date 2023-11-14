@@ -23,8 +23,8 @@ public class BaseEntityServiceImpl<T extends BaseEntity<ID>, ID extends Serializ
     }
 
     @Override
-    public void update(T entity,ID id) {
-       baseRepository.update(entity,id);
+    public void update(String firstname,String lastname,ID id) {
+       baseRepository.update(firstname,lastname,id);
     }
 
     @Override
@@ -40,5 +40,10 @@ baseRepository.deleteById(id);
     @Override
     public boolean contains(ID id) {
         return baseRepository.containsbyId(id);
+    }
+
+    @Override
+    public T findById(ID id) {
+        return baseRepository.findById(id);
     }
 }
