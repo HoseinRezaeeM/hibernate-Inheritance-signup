@@ -9,7 +9,7 @@ public interface BaseEntityRepository<T extends BaseEntity<ID>, ID extends Seria
 
     void save(T entity);
 
-    void update(T entity,ID id);
+    void update(String firstname,String lastname,ID id);
 
     void deleteById(ID id);
 
@@ -17,5 +17,6 @@ public interface BaseEntityRepository<T extends BaseEntity<ID>, ID extends Seria
 
     boolean containsbyId(ID id);
 
+    T findById(ID id);
 
 }
