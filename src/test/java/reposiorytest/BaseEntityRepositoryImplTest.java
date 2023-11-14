@@ -19,10 +19,13 @@ class BaseEntityRepositoryImplTest {
 
     @Test
     void updateTest() {
-        Person person = ApplicationContex.getPersonServiceImpl().findById(2);
-        ApplicationContex.getPersonServiceImpl().update("zahra", "Ebrahi", 2);
+        Person person = new Person();
+        person.setFirstname("Fatemeh");
+        person.setLastname("saravin");
+        ApplicationContex.getPersonServiceImpl().update("Fatemeh", "saravin", 2);
         Person person1 = ApplicationContex.getPersonServiceImpl().findById(2);
-        Assertions.assertNotEquals(person1,person);
+        Assertions.assertEquals(person.getFirstname(), person1.getFirstname());
+        Assertions.assertEquals(person.getLastname(), person1.getLastname());
     }
 
     @Test
