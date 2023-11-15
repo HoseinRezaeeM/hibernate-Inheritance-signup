@@ -4,14 +4,16 @@ import ir.hibernate.person.domain.Person;
 import ir.hibernate.person.util.ApplicationContex;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.xml.sax.SAXException;
 
+import java.io.IOException;
 import java.util.List;
 
 class BaseEntityRepositoryImplTest {
 
     @Test
-    void saveTest() {
-        Person person = new Person("Hosein", "Rezaei", "1377/02/07");
+    void saveTest() throws IOException, SAXException {
+        Person person = new Person("Hosein", "Rezaei", "1377");
         ApplicationContex.getPersonServiceImpl().save(person);
         final boolean contains = ApplicationContex.getPersonServiceImpl().contains(1);
         Assertions.assertTrue(contains);
