@@ -1,0 +1,1 @@
+# hibernate-Inheritance-generics-signup
