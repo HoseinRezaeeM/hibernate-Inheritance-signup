@@ -2,13 +2,12 @@ package ir.hibernate.person.base.repository.impl;
 
 import ir.hibernate.person.base.domain.BaseEntity;
 import ir.hibernate.person.base.repository.BaseEntityRepository;
-import ir.hibernate.person.domain.Person;
-import ir.hibernate.person.domain.Teacher;
+
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 import java.io.Serializable;
-import java.util.Iterator;
+
 import java.util.List;
 
 public abstract class BaseEntityRepositoryImpl<T extends BaseEntity<ID>, ID extends Serializable>

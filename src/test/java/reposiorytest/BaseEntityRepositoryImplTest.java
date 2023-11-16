@@ -15,7 +15,7 @@ class BaseEntityRepositoryImplTest {
     void saveTest() throws IOException, SAXException {
         Person person = new Person("Hosein", "Rezaei", "1377");
         ApplicationContex.getPersonServiceImpl().save(person);
-        final boolean contains = ApplicationContex.getPersonServiceImpl().contains(1);
+        final boolean contains = ApplicationContex.getPersonServiceImpl().contains(2);
         Assertions.assertTrue(contains);
     }
 
