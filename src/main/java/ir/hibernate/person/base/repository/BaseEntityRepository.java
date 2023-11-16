@@ -4,7 +4,7 @@ import ir.hibernate.person.base.domain.BaseEntity;
 
 import java.io.Serializable;
 import java.util.List;
-
+//Hosen Rezaei
 public interface BaseEntityRepository<T extends BaseEntity<ID>, ID extends Serializable> {
 
     void save(T entity);

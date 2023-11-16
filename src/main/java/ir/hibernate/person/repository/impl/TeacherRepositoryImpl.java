@@ -15,3 +15,4 @@ public class TeacherRepositoryImpl extends BaseEntityRepositoryImpl<Teacher, Int
         return "Teacher";
     }
 }
+//Hosen Rezaei

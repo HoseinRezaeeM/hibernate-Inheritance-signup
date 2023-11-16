@@ -5,3 +5,4 @@ import ir.hibernate.person.domain.Person;
 
 public interface PersonRepository extends BaseEntityRepository<Person,Integer> {
 }
+//Hosen Rezaei

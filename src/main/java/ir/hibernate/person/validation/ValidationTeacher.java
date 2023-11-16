@@ -23,7 +23,7 @@ public class ValidationTeacher {
         validator=factory.usingContext()
                 .messageInterpolator(new ParameterMessageInterpolator())
                 .getValidator();
-
+//Hosen Rezaei
         Set<ConstraintViolation<Teacher>> violations = validator.validate(teacher);
 
         if (violations.isEmpty()) {

@@ -2,7 +2,7 @@ package ir.hibernate.person.base.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-
+//Hosen Rezaei
 import javax.persistence.*;
 import java.io.Serializable;
 @Entity

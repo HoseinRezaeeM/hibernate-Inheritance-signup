@@ -10,6 +10,8 @@ import java.io.IOException;
 
 public class Application {
     public static void main(String[] args) throws IOException, SAXException {
+
+
         Person person = new Person("Hosein", "Rezaei", "1377");
         Person person1 = new Person("Ali", "Ebrahimi", "1380");
         Person person2 = new Person("Mohsen", "Razavi", "1368");

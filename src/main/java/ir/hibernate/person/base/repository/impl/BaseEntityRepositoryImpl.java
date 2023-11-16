@@ -37,7 +37,7 @@ public abstract class BaseEntityRepositoryImpl<T extends BaseEntity<ID>, ID exte
         query.setParameter("id", id);
         return query.uniqueResult();
     }
-
+    //Hosen Rezaei
     @Override
     public void update(String firstname, String lastname, ID id) {
         String hql = "UPDATE %s SET firstname=:firstname,lastname=:lastname Where id=:id";

@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.List;
 
 class BaseEntityRepositoryImplTest {
-
+    //Hosen Rezaei
     @Test
     void saveTest() throws IOException, SAXException {
         Person person = new Person("Hosein", "Rezaei", "1377");
@@ -43,7 +43,7 @@ class BaseEntityRepositoryImplTest {
         final List<Person> all = ApplicationContex.getPersonServiceImpl().findAll();
         Assertions.assertNotNull(all);
     }
-
+    //Hosen Rezaei
     @Test
     void containsTest() {
         ApplicationContex.getPersonServiceImpl().deleteById(5);
