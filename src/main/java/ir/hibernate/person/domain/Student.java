@@ -2,6 +2,7 @@ package ir.hibernate.person.domain;
 
 
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,12 +15,13 @@ import javax.validation.constraints.Min;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Student extends Person{
     @Column(name = "student_id",nullable = false)
     @Min(value = 100,message = "student id can't under 1000")
-    private Integer studentId;
+    Integer studentId;
     @Column(name = "field_study",nullable = false)
-    private String fieldStudy;
+    String fieldStudy;
 
 
     public Student(String firstname, String lastname, String birthday, Integer studentId, String fieldStudy) {

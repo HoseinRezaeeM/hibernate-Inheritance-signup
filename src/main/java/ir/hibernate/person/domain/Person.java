@@ -3,22 +3,24 @@ package ir.hibernate.person.domain;
 import ir.hibernate.person.base.domain.BaseEntity;
 
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
-import javax.validation.constraints.Max;
+
 
 @Entity
 @Getter
 @Setter
 @ToString
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @NoArgsConstructor
 @AllArgsConstructor
 public class Person extends BaseEntity<Integer> {
     @Column(name = "first_name")
-    private String firstname;
+    String firstname;
     @Column(name = "last_name")
-    private String lastname;
+    String lastname;
     @Column(name = "birthday")
-    private String birthday;
+    String birthday;
 
 }
