@@ -5,3 +5,4 @@
 #and use to Validation hibernate this project.
 
 <img src="https://github.com/HoseinRezaeeM/hibernate-Inheritance-signup/blob/master/architecture.jpg">
+<img src="https://github.com/HoseinRezaeeM/hibernate-Inheritance-signup/blob/master/GFGHibernateLifecycle.png">
