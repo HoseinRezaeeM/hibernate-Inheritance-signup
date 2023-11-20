@@ -9,7 +9,7 @@ import org.hibernate.query.Query;
 import java.io.Serializable;
 
 import java.util.List;
-
+//https://www.linkedin.com/in/hosein-rezaei-developer
 public abstract class BaseEntityRepositoryImpl<T extends BaseEntity<ID>, ID extends Serializable>
         implements BaseEntityRepository<T, ID> {
     private final Session session;
@@ -56,7 +56,7 @@ public abstract class BaseEntityRepositoryImpl<T extends BaseEntity<ID>, ID exte
 
         }
     }
-
+//https://www.linkedin.com/in/hosein-rezaei-developer
     @Override
     public void deleteById(ID id) {
         String hql = "DELETE FROM %s Where id=:id";
