@@ -15,6 +15,7 @@ import javax.persistence.*;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @NoArgsConstructor
 @AllArgsConstructor
+@PrimaryKeyJoinColumn(name = "person_id")
 public class Person extends BaseEntity<Integer> {
     @Column(name = "first_name")
     String firstname;

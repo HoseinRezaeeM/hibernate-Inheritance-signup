@@ -6,6 +6,7 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.validation.constraints.Min;
 
 
@@ -16,8 +17,9 @@ import javax.validation.constraints.Min;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@PrimaryKeyJoinColumn(name = "student_id")
 public class Student extends Person{
-    @Column(name = "student_id",nullable = false)
+   // @Column(name = "student_id",nullable = false)
     @Min(value = 100,message = "student id can't under 1000")
     Integer studentId;
     @Column(name = "field_study",nullable = false)

@@ -3,10 +3,7 @@ package ir.hibernate.person.domain;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
@@ -18,8 +15,9 @@ import javax.validation.constraints.Min;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@PrimaryKeyJoinColumn(name = "teacher_id")
 public class Teacher extends Person {
-    @Column(name = "teacher_id",nullable = false)
+   // @Column(name = "teacher_id",nullable = false)
     @Min(value = 100 ,message = "teacherId can't under 100")
     Integer teacherId;
     @Column(name = "degree",nullable = false)
