@@ -5,7 +5,7 @@ import lombok.Setter;
 //Hosen Rezaei
 import javax.persistence.*;
 import java.io.Serializable;
-@Entity
+@MappedSuperclass
 @Inheritance(strategy = InheritanceType.JOINED)
 @Getter
 @Setter
