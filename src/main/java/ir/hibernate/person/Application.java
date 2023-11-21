@@ -26,7 +26,7 @@ public class Application {
         Teacher teacher1 = new Teacher("mehdi", "vaezzade", "1401", 160, Degree.MASTER, MasterDegree.PROFESSOR, 12700000L);
         Teacher teacher2 = new Teacher("mohsen", "vaezzade", "1400", 170, Degree.BACHELOR, MasterDegree.ASSOCIATEPROFESSOR, 102500000L);
         Teacher teacher3 = new Teacher("vahid", "vaezzade", "1399", 180, Degree.MASTER, MasterDegree.ASSISTANTPROFESSOR, 11500000L);
-        Teacher teacher4 = new Teacher("vahid", "vaezzade", "1399", 200, Degree.BACHELOR, MasterDegree.ASSISTANTPROFESSOR, 18500000L);
+        Teacher teacher4 = new Teacher("vahid", "vaezzade", "1399", 20, Degree.BACHELOR, MasterDegree.ASSISTANTPROFESSOR, 18500000L);
 
         ApplicationContex.getPersonServiceImpl().save(person);
         ApplicationContex.getPersonServiceImpl().save(person1);
@@ -44,25 +44,25 @@ public class Application {
         ValidationStudent.validationforSaveStudent(student3);
 
 
-        ApplicationContex.getPersonServiceImpl().deleteById(1);
-        ApplicationContex.getPersonServiceImpl().deleteById(7);
-
-        System.out.println(ApplicationContex.getPersonServiceImpl().contains(3));
-        System.out.println(ApplicationContex.getStudentServiceImpl().contains(2));
+//        ApplicationContex.getPersonServiceImpl().deleteById(1);
+//        ApplicationContex.getPersonServiceImpl().deleteById(7);
+//
+//        System.out.println(ApplicationContex.getPersonServiceImpl().contains(3));
+//        System.out.println(ApplicationContex.getStudentServiceImpl().contains(2));
 
         ApplicationContex.getStudentServiceImpl().findAll().forEach(System.out::println);
 
-        ApplicationContex.getPersonServiceImpl().update("Mohamad", "Razavian", 4);
-        ApplicationContex.getPersonServiceImpl().update("Mohamad", "Razavian", 8);
-        ApplicationContex.getPersonServiceImpl().update("Mohamad", "Razavian", 10);
-
-        System.out.println(ApplicationContex.getPersonServiceImpl().signUp("Ali", "jamshidi"));
-        System.out.println(ApplicationContex.getStudentServiceImpl().signUp(2100, "Mechanic"));
-        System.out.println(ApplicationContex.getTeacherServiceImpl().signUp(500, Degree.MASTER));
-
-        System.out.println(ApplicationContex.getPersonServiceImpl().findById(1));
-        System.out.println(ApplicationContex.getStudentServiceImpl().findById(8));
-        System.out.println(ApplicationContex.getTeacherServiceImpl().findById(10));
+//        ApplicationContex.getPersonServiceImpl().update("Mohamad", "Razavian", 4);
+//        ApplicationContex.getPersonServiceImpl().update("Mohamad", "Razavian", 8);
+//        ApplicationContex.getPersonServiceImpl().update("Mohamad", "Razavian", 10);
+//
+//        System.out.println(ApplicationContex.getPersonServiceImpl().signUp("Ali", "jamshidi"));
+//        System.out.println(ApplicationContex.getStudentServiceImpl().signUp(2100, "Mechanic"));
+//        System.out.println(ApplicationContex.getTeacherServiceImpl().signUp(500, Degree.MASTER));
+//
+//        System.out.println(ApplicationContex.getPersonServiceImpl().findById(1));
+//        System.out.println(ApplicationContex.getStudentServiceImpl().findById(8));
+//        System.out.println(ApplicationContex.getTeacherServiceImpl().findById(10));
 
     }
 }

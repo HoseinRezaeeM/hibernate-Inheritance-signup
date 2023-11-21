@@ -8,24 +8,29 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
+import javax.persistence.EntityManagerFactory;
+
 public class SessionFactoryProvider {
 
     private final static SessionFactory sessionFactory;
+
     //Hosen Rezaei
     static {
         StandardServiceRegistry standardServiceRegistry = new StandardServiceRegistryBuilder()
                 .configure()
                 .build();
 
-        sessionFactory = new MetadataSources(standardServiceRegistry)
+       sessionFactory = new MetadataSources(standardServiceRegistry)
                 .addAnnotatedClass(Person.class)
                 .addAnnotatedClass(Student.class)
                 .addAnnotatedClass(Teacher.class)
-                .buildMetadata()
-                .buildSessionFactory();
+               .buildMetadata()
+               .buildSessionFactory();
+
     }
 
     public static SessionFactory getSessionFactory() {
         return sessionFactory;
-    }
+   }
+
 }

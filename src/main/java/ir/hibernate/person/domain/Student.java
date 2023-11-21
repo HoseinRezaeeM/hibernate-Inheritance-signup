@@ -20,7 +20,7 @@ import javax.validation.constraints.Min;
 @PrimaryKeyJoinColumn(name = "student_id")
 public class Student extends Person{
    // @Column(name = "student_id",nullable = false)
-    @Min(value = 100,message = "student id can't under 1000")
+    @Min(value = 100,message = "student id can't under 100")
     Integer studentId;
     @Column(name = "field_study",nullable = false)
     String fieldStudy;

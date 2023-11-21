@@ -28,7 +28,7 @@ public class ValidationStudent {
         Set<ConstraintViolation<Student>> violations = validator.validate(student);
 
         if (violations.isEmpty()) {
-            ApplicationContex.getStudentServiceImpl().save(student);
+            ApplicationContex.getStudentServiceImpl().save(student);/////
             System.out.println("Teacher saved successfully.");
         } else {
             for (ConstraintViolation<Student> violation : violations) {
